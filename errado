@@ -1,0 +1,33 @@
+           /*<div class="nome-contato">
+                                    <?php print $linha->nome?>
+                                </div>
+                            </div>
+                                <?php
+                                try{
+                                    $consulta = $conectar->query("SELECT * FROM contatos");
+                                    while( $linha = $consulta->fetch(PDO::FETCH_ASSOC)){
+                                       
+                                        echo "<div class='nome-contato'> <p>$linha[nome]</p></div>";
+                                        echo "<div class='telefone-contato'> <p>Telefone: $linha[telefone]</p></div>";
+                                        echo "<div class='cep-contato'> <p>Cep: $linha[cep]</p></div>";
+                                        echo "<div class='rua-contato'> <p>Rua: $linha[rua]</p></div>";
+                                        echo "<div class='bairro-contato'><p>Bairro: $linha[bairro]</p></div>";
+                                        echo "<div class='numero-contato'><p>Número: $linha[numero]</p></div>";
+                                        echo "<div class='cidade-contato'><p>Cidade: $linha[cidade] </p></div>";
+                                    };
+                                }catch(PDOException $e){
+                                    echo '<div class="erro"><div class="container">';
+                                    echo '<img class="erro-img" src="img/error.png">'; 
+                                    echo '<p class="texto-erro">Falha na conexão com o banco de dados</p>';
+                                    echo '</div></div>';
+                                }
+
+                                 ?>*/
+                
+
+
+                //Caso ocorra algum erro na conexão, exibe a mensagem
+    echo '<div class="erro"><div class="container">';
+    echo '<img class="erro-img" src="img/error.png">'; 
+    echo '<p class="texto-erro">Falha na conexão com o banco de dados</p>';
+    echo '</div></div>';
